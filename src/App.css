@@ -1,38 +1,186 @@
-.App {
-  text-align: center;
+* {
+	padding: 0;
+	margin: 0;
+}
+*::-webkit-scrollbar {
+	display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+a {
+	text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* 
+
+left nav 
+
+*/
+.left-nav {
+	width: 20%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: linear-gradient(0deg, #00c3ff, #0744ec);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header {
+	width: 100%;
+	height: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 40px;
+}
+header a {
+	color: white;
+}
+.routes {
+	width: 100%;
+	height: 85%;
+	overflow-y: scroll;
+}
+.route {
+	width: 100%;
+	/* height: 220px; */
+	height: 70px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	overflow: hidden;
+	transition: all 0.5s ease;
+}
+a {
+	color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.route-title {
+	width: 100%;
+	min-height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+.route-title a,
+.route-title-in a {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.route-title:hover {
+	background-color: rgb(0, 83, 191);
+	border-left: 10px solid white;
+}
+.route-title-in {
+	width: 100%;
+	height: 50px;
+	background: rgb(16, 67, 135);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 
+
+left nav 
+
+*/
+
+/* 
+
+right section 
+
+*/
+.right-section {
+	width: 80%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
+
+/* top nav */
+.top-nav {
+	width: 100%;
+	height: 15%;
+	background: #000;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: white;
+	box-shadow: 4px 3px 10px gray;
+}
+.top-nav-r,
+.top-nav-l {
+	width: 29%;
+	height: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: row;
+	color: blue;
+	border: 1px solid black;
+	border-radius: 20px;
+}
+label {
+	font-size: 30px;
+}
+#grade,
+#tech {
+	width: 100px;
+	height: 40px;
+	cursor: pointer;
+	font-size: 20px;
+	outline: none;
+}
+#grade option {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+}
+.top-nav-l ul {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+	list-style-type: none;
+}
+.top-nav-l ul li {
+	margin: auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+/* top nav */
+
+/* main */
+.main {
+	width: 100%;
+	height: 85%;
+	overflow-y: scroll;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+/* main */
+
+/* 
+
+right section 
+
+*/
