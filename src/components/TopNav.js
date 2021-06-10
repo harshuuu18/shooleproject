@@ -1,45 +1,68 @@
 import React, { createContext, useState } from "react"
 import { Link, useHistory, useLocation } from "react-router-dom"
+import Dropdown from "react-bootstrap/Dropdown"
+
+import DropdownButton from "react-bootstrap/DropdownButton"
+
 // export const gradeContext = createContext()
 
 function TopNav(props) {
 	const location = useLocation()
 	const path = location.pathname
+	const newpath = `${path}`.split("/")
 	const history = useHistory()
 
 	return (
-		<div className="top-nav" style={path == "/" ? { display: "none" } : {}}>
-			<div className="top-nav-l">
-				<label htmlFor="grade">Grade:</label>
-				<select
-					name="grade"
-					id="grade"
-					onChange={(e) => {
-						props.changeGrade(e)
-					}}>
-					<option value="1-2">1-2</option>
-					<option value="3-4">3-4</option>
-					<option value="5-6">5-6</option>
-					<option value="7-8">7-8</option>
-					<option value="9-12">9-12</option>
-				</select>
+		<>
+			<div className="top-nav">
+				{/* <div className="top-nav-l"></div> */}
+				{/* <div className="top-nav-l"></div> */}
 			</div>
-			<div className="top-nav-l">
-				<label htmlFor="tech">Tech:</label>
-				<select
-					name="tech"
-					id="tech"
-					onChange={(e) => {
-						props.changeTech(e)
-					}}>
-					<option value="app">App</option>
-					<option value="game">Game</option>
-					<option value="gamewithai">Game with AI</option>
-					<option value="web">Web</option>
-					<option value="aiwithml">AI with ML</option>
-				</select>
+			<div
+				className="filter-breadcrumb"
+				style={path == "/" ? { display: "none" } : {}}>
+				<div className="breadcrumb">
+					<h2>{newpath[1]}</h2>
+
+					{newpath[2] ? <h2>{">"}</h2> : <></>}
+					<h2>{newpath[2]}</h2>
+
+					{/* {grade ? <h2>{">"}</h2> : <></>}
+					<h2>{grade}</h2>
+					{tech ? <h2>{">"}</h2> : <></>}
+
+					<h2>{tech}</h2> */}
+				</div>
+				<div className="filters">
+					<select
+						name="grade"
+						id="grade"
+						placeholder="Grade"
+						onChange={(e) => {
+							props.changeGrade(e)
+						}}>
+						<option value="1-2">1-2</option>
+						<option value="3-4">3-4</option>
+						<option value="5-6">5-6</option>
+						<option value="7-8">7-8</option>
+						<option value="9-12">9-12</option>
+					</select>
+
+					<select
+						name="tech"
+						id="tech"
+						onChange={(e) => {
+							props.changeTech(e)
+						}}>
+						<option value="app">App</option>
+						<option value="game">Game</option>
+						<option value="gamewithai">Game with AI</option>
+						<option value="web">Web</option>
+						<option value="aiwithml">AI with ML</option>
+					</select>
+				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 

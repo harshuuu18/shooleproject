@@ -2,8 +2,37 @@ import React, { useCallback, useState } from "react"
 import { useLocation } from "react-router-dom"
 import { useEffect } from "react/cjs/react.development"
 import jsonData from "../A2PI.json"
+import { makeStyles } from "@material-ui/core/styles"
+import Accordion from "@material-ui/core/Accordion"
+import AccordionSummary from "@material-ui/core/AccordionSummary"
+import AccordionDetails from "@material-ui/core/AccordionDetails"
+import Typography from "@material-ui/core/Typography"
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
+import Button from "@material-ui/core/Button"
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		width: "100%",
+	},
+	heading: {
+		fontSize: theme.typography.pxToRem(15),
+		fontWeight: theme.typography.fontWeightRegular,
+	},
+	main: {
+		width: "80%",
+	},
+	details: {
+		display: "grid",
+		gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
+		gridTemplateRows: "1fr 1fr",
+		gap: "8px 8px",
+		gridTemplateAreas: `". . . . . ."
+		  ". . . . . ."`,
+	},
+}))
 
 function RenderData(props) {
+	const classes = useStyles()
 	const location = useLocation()
 	const path = location.pathname
 	const grade = props.grade
@@ -33,22 +62,176 @@ function RenderData(props) {
 	return (
 		<>
 			{!grade || !tech ? (
-				<div>
+				<>
 					{newData.map((i) => {
 						return (
-							<div>
-								<h1>{i.data}</h1>
-							</div>
+							<>
+								<Accordion className={classes.main}>
+									<AccordionSummary
+										expandIcon={<ExpandMoreIcon />}
+										aria-controls="panel1a-content"
+										id="panel1a-header">
+										<Typography className={classes.heading}>
+											Section-1 -{" "}
+											{` ( ${i.country} - ${i.grade} - ${i.tech} ) `}
+										</Typography>
+									</AccordionSummary>
+									<AccordionDetails className={classes.details}>
+										{i.links1
+											? i.links1.map((l1, index) => {
+													return (
+														<Button
+															variant="contained"
+															href={l1}
+															color="primary">
+															Level-{index + 1}
+														</Button>
+													)
+											  })
+											: "not available"}
+									</AccordionDetails>
+								</Accordion>
+								<Accordion className={classes.main}>
+									<AccordionSummary
+										expandIcon={<ExpandMoreIcon />}
+										aria-controls="panel1a-content"
+										id="panel1a-header">
+										<Typography className={classes.heading}>
+											Section-1 -{" "}
+											{` ( ${i.country} - ${i.grade} - ${i.tech} ) `}
+										</Typography>
+									</AccordionSummary>
+									<AccordionDetails className={classes.details}>
+										{i.links2
+											? i.links2.map((l1, index) => {
+													return (
+														<Button
+															variant="contained"
+															href={l1}
+															color="primary">
+															Level-{index + 1}
+														</Button>
+													)
+											  })
+											: "not available"}
+									</AccordionDetails>
+								</Accordion>
+								<Accordion className={classes.main}>
+									<AccordionSummary
+										expandIcon={<ExpandMoreIcon />}
+										aria-controls="panel1a-content"
+										id="panel1a-header">
+										<Typography className={classes.heading}>
+											Section-1 -{" "}
+											{` ( ${i.country} - ${i.grade} - ${i.tech} ) `}
+										</Typography>
+									</AccordionSummary>
+									<AccordionDetails className={classes.details}>
+										{i.links3
+											? i.links3.map((l1, index) => {
+													return (
+														<Button
+															variant="contained"
+															href={l1}
+															color="primary">
+															Level-{index + 1}
+														</Button>
+													)
+											  })
+											: "not available"}
+									</AccordionDetails>
+								</Accordion>
+
+								<br />
+								<br />
+							</>
 						)
 					})}
-				</div>
+				</>
 			) : (
 				<div>
-					{secondData.map((o) => {
+					{secondData.map((i) => {
 						return (
-							<div>
-								<h1>{o.data ? o.data : "no data available"}</h1>
-							</div>
+							<>
+								<Accordion className={classes.main}>
+									<AccordionSummary
+										expandIcon={<ExpandMoreIcon />}
+										aria-controls="panel1a-content"
+										id="panel1a-header">
+										<Typography className={classes.heading}>
+											Section-1 -{" "}
+											{` ( ${i.country} - ${i.grade} - ${i.tech} ) `}
+										</Typography>
+									</AccordionSummary>
+									<AccordionDetails className={classes.details}>
+										{i.links1
+											? i.links1.map((l1, index) => {
+													return (
+														<Button
+															variant="contained"
+															href={l1}
+															color="primary">
+															Level-{index + 1}
+														</Button>
+													)
+											  })
+											: "not available"}
+									</AccordionDetails>
+								</Accordion>
+								<Accordion className={classes.main}>
+									<AccordionSummary
+										expandIcon={<ExpandMoreIcon />}
+										aria-controls="panel1a-content"
+										id="panel1a-header">
+										<Typography className={classes.heading}>
+											Section-1 -{" "}
+											{` ( ${i.country} - ${i.grade} - ${i.tech} ) `}
+										</Typography>
+									</AccordionSummary>
+									<AccordionDetails className={classes.details}>
+										{i.links2
+											? i.links2.map((l1, index) => {
+													return (
+														<Button
+															variant="contained"
+															href={l1}
+															color="primary">
+															Level-{index + 1}
+														</Button>
+													)
+											  })
+											: "not available"}
+									</AccordionDetails>
+								</Accordion>
+								<Accordion className={classes.main}>
+									<AccordionSummary
+										expandIcon={<ExpandMoreIcon />}
+										aria-controls="panel1a-content"
+										id="panel1a-header">
+										<Typography className={classes.heading}>
+											Section-1 -{" "}
+											{` ( ${i.country} - ${i.grade} - ${i.tech} ) `}
+										</Typography>
+									</AccordionSummary>
+									<AccordionDetails className={classes.details}>
+										{i.links3
+											? i.links3.map((l1, index) => {
+													return (
+														<Button
+															variant="contained"
+															href={l1}
+															color="primary">
+															Level-{index + 1}
+														</Button>
+													)
+											  })
+											: "not available"}
+									</AccordionDetails>
+								</Accordion>
+
+								<br />
+								<br />
+							</>
 						)
 					})}
 				</div>

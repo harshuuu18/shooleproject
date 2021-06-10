@@ -14,30 +14,33 @@ function Route(props) {
 	}, [routeStyle.height])
 
 	return (
-		<div className="route" style={routeStyle}>
-			<div
-				className="route-title"
-				onClick={(e) => {
-					routeStyle.height == "70px"
-						? setRouteStyle({
-								height: "170px",
-						  })
-						: setRouteStyle({
-								height: "70px",
-						  })
-				}}
-				style={routeTitleStyle}>
-				<Link to={props.firstRoute}>
-					<h3>{props.firstRouteName} </h3>
-				</Link>
+		<>
+			<div className="route" name="route" style={routeStyle}>
+				<div
+					className="route-title"
+					onClick={(e) => {
+						routeStyle.height == "70px"
+							? setRouteStyle({
+									height: "170px",
+							  })
+							: setRouteStyle({
+									height: "70px",
+							  })
+					}}
+					style={routeTitleStyle}>
+					<Link to={props.firstRoute}>
+						<h3>{props.firstRouteName} </h3>
+					</Link>
+				</div>
+				<div className="route-title-in">
+					<Link to={props.firstChildRoute}>{props.firstChildRouteName}</Link>
+				</div>
+				<div className="route-title-in" style={props.RouteStyles}>
+					<Link to={props.secChildRoute}>{props.secChildRouteName}</Link>
+				</div>
 			</div>
-			<div className="route-title-in">
-				<Link to={props.firstChildRoute}>{props.firstChildRouteName}</Link>
-			</div>
-			<div className="route-title-in" style={props.RouteStyles}>
-				<Link to={props.secChildRoute}>{props.secChildRouteName}</Link>
-			</div>
-		</div>
+			<hr />
+		</>
 	)
 }
 
