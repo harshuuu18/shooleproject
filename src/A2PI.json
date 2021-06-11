@@ -6,46 +6,262 @@
 		"tech": "game",
 		"data": "1to1/india/1-2/game",
 		"links1": [
-			"https://www.google.com/",
-			"https://www.instagram.com/",
-			"https://www.google.com/",
-			"https://www.instagram.com/",
-			"https://www.google.com/",
-			"https://www.instagram.com/",
-			"https://www.google.com/",
-			"https://www.instagram.com/",
-			"https://www.google.com/",
-			"https://www.instagram.com/",
-			"https://www.google.com/",
-			"https://www.instagram.com/"
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.google.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			}
 		],
 		"links2": [
-			"https://www.google.com/",
-			"https://www.instagram.com/",
-			"https://www.google.com/",
-			"https://www.instagram.com/",
-			"https://www.google.com/",
-			"https://www.instagram.com/",
-			"https://www.google.com/",
-			"https://www.instagram.com/",
-			"https://www.google.com/",
-			"https://www.instagram.com/",
-			"https://www.google.com/",
-			"https://www.instagram.com/"
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			}
 		],
 		"links3": [
-			"https://www.google.com/",
-			"https://www.instagram.com/",
-			"https://www.google.com/",
-			"https://www.instagram.com/",
-			"https://www.google.com/",
-			"https://www.instagram.com/",
-			"https://www.google.com/",
-			"https://www.instagram.com/",
-			"https://www.google.com/",
-			"https://www.instagram.com/",
-			"https://www.google.com/",
-			"https://www.instagram.com/"
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			},
+			{
+				"link": [
+					"https://www.google.com/",
+					"https://www.instagram.com/",
+					"https://www.google.com/"
+				]
+			}
 		],
 		"path": "/1to1/india"
 	},

@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 		gridTemplateRows: "1fr 1fr",
 		gap: "8px 8px",
 		gridTemplateAreas: `". . . . . ."
-		  ". . . . . ."`,
+		". . . . . ."`,
 	},
 }))
 
@@ -38,6 +38,7 @@ function RenderData(props) {
 	const grade = props.grade
 	const tech = props.tech
 	const [newData, setNewData] = useState([])
+	const [newLinks, setNewLinks] = useState(["2", "1", "3"])
 
 	useEffect(() => {
 		console.log("path changed")
@@ -63,7 +64,8 @@ function RenderData(props) {
 		<>
 			{!grade || !tech ? (
 				<>
-					{newData.map((i) => {
+					{/* {newData.map((i) => {
+						console.log(i.grade)
 						return (
 							<>
 								<Accordion className={classes.main}>
@@ -146,7 +148,7 @@ function RenderData(props) {
 								<br />
 							</>
 						)
-					})}
+					})} */}
 				</>
 			) : (
 				<div>
@@ -169,7 +171,10 @@ function RenderData(props) {
 													return (
 														<Button
 															variant="contained"
-															href={l1}
+															onClick={(e) => {
+																setNewLinks([l1.link])
+																console.log(l1.link)
+															}}
 															color="primary">
 															Level-{index + 1}
 														</Button>
@@ -236,6 +241,14 @@ function RenderData(props) {
 					})}
 				</div>
 			)}
+			{newLinks.map((n) => {
+				console.log(n)
+				return (
+					<>
+						<h1>{n}</h1>
+					</>
+				)
+			})}
 		</>
 	)
 }

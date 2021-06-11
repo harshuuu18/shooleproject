@@ -57,7 +57,7 @@ const Sidebar = () => {
 				<Nav></Nav>
 				<SidebarNav sidebar={sidebar}>
 					<SidebarWrap>
-						<NavIcon to="#">
+						<NavIcon to="/" onClick={() => window.location.reload()}>
 							{/* <img className="logo" width="210px" src={logo}></img> */}
 							<h2>LOGO</h2>
 						</NavIcon>

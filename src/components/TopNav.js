@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react"
+import React, { createContext, useCallback, useEffect, useState } from "react"
 import { Link, useHistory, useLocation } from "react-router-dom"
 import Dropdown from "react-bootstrap/Dropdown"
 
@@ -7,10 +7,17 @@ import DropdownButton from "react-bootstrap/DropdownButton"
 // export const gradeContext = createContext()
 
 function TopNav(props) {
+	const [grade, setGrade] = useState("")
+	const [tech, setTech] = useState("")
+	const [gradeValue, setGradeValue] = useState({})
 	const location = useLocation()
 	const path = location.pathname
 	const newpath = `${path}`.split("/")
 	const history = useHistory()
+	useEffect(() => {}, [path])
+	const changes1 = useCallback(() => {
+		return path === "/1to1/india" ? <></> : <></>
+	}, [path])
 
 	return (
 		<>
@@ -27,11 +34,11 @@ function TopNav(props) {
 					{newpath[2] ? <h2>{">"}</h2> : <></>}
 					<h2>{newpath[2]}</h2>
 
-					{/* {grade ? <h2>{">"}</h2> : <></>}
+					{grade ? <h2>{">"}</h2> : <></>}
 					<h2>{grade}</h2>
 					{tech ? <h2>{">"}</h2> : <></>}
 
-					<h2>{tech}</h2> */}
+					<h2>{tech}</h2>
 				</div>
 				<div className="filters">
 					<select
@@ -40,7 +47,11 @@ function TopNav(props) {
 						placeholder="Grade"
 						onChange={(e) => {
 							props.changeGrade(e)
-						}}>
+							console.log(e.target.value)
+							setGrade(e.target.value)
+						}}
+						onClick={(e) => props.changeGrade(e)}>
+						<option value="">Select Grade</option>
 						<option value="1-2">1-2</option>
 						<option value="3-4">3-4</option>
 						<option value="5-6">5-6</option>
@@ -53,7 +64,11 @@ function TopNav(props) {
 						id="tech"
 						onChange={(e) => {
 							props.changeTech(e)
-						}}>
+							console.log(e.target.value)
+							setTech(e.target.value)
+						}}
+						onClick={(e) => props.changeTech(e)}>
+						<option value="">Select Tech</option>
 						<option value="app">App</option>
 						<option value="game">Game</option>
 						<option value="gamewithai">Game with AI</option>
